@@ -36,32 +36,159 @@ export const backbone = {
   },
   "menu": [
     {
-      "category": "Appetizers",
+      "category": "Small Plates",
       "items": [
-        { "name": "Vegetable Samosa", "description": "Crispy pastry filled with spiced potatoes and peas.", "price": "$6.95" },
-        { "name": "Paneer Tikka", "description": "Cubes of paneer marinated in yogurt and spices, grilled in a tandoor.", "price": "$12.95" }
+        { "name": "Samosa (2)", "description": "Samosa turnovers, potato & peas", "price": "$10" },
+        { "name": "Onion Pakora", "description": "Chickpea flour, mint", "price": "$10" },
+        { "name": "Kungfu Gobi", "description": "Crispy cauliflower, cherry tomato, sweet peppers, tangy garlic sauce", "price": "$19" },
+        { "name": "Paneer Tikka", "description": "Marinated paneer, peppers, onions, tandoor grilled", "price": "$19" },
+        { "name": "Corn Ribs", "description": "Grilled corn, spice rub", "price": "$13" },
+        { "name": "Sweet Potato Chat", "description": "Grilled sweet potato, chutneys, sev", "price": "$14" },
+        { "name": "Murgh Malai Tikka", "description": "Chicken, cream cheese, cardamom, cashew", "price": "$19" },
+        { "name": "Highway Malai Tikka", "description": "Chicken, yogurt, cream, spices", "price": "$19" },
+        { "name": "Jhinga Malai Marke", "description": "Grilled shrimp, house spices", "price": "$24" },
+        { "name": "Lamb Chops", "description": "Grilled lamb chops, minted yogurt", "price": "$34" },
+        { "name": "Salmon Chili Tikka", "description": "Tandoor grilled salmon, chili marinade", "price": "$28" },
+        { "name": "Lamb Tikka", "description": "Boneless lamb, cilantro, tandoor grilled", "price": "$28" }
       ]
     },
     {
-      "category": "From The Tandoor",
+      "category": "Vegan",
       "items": [
-        { "name": "Chicken Tikka", "description": "Boneless chicken marinated in yogurt and spices, cooked in tandoor.", "price": "$15.95" },
-        { "name": "Tandoori Chicken", "description": "Chicken marinated in yogurt and a blend of spices, grilled to perfection.", "price": "$16.95" }
+        { "name": "Aloo Gobi", "description": "Potato, cauliflower, spices", "price": "$19" },
+        { "name": "Tadka Dal", "description": "Yellow lentils, cumin, garlic, chili", "price": "$19" },
+        { "name": "Vegetable Madras", "description": "Seasonal vegetables, coconut, curry leaves", "price": "$19" },
+        { "name": "Chana Masala", "description": "Chickpeas, onion-tomato masala", "price": "$19" }
       ]
     },
     {
-      "category": "Main Courses",
+      "category": "Vegetable",
       "items": [
-        { "name": "Butter Chicken", "description": "Grilled chicken simmered in a creamy tomato sauce.", "price": "$18.95" },
-        { "name": "Lamb Rogan Josh", "description": "Tender lamb cooked in a rich, aromatic curry.", "price": "$20.95" },
-        { "name": "Saag Paneer", "description": "Paneer cheese in a smooth, creamy spinach sauce.", "price": "$16.95" }
+        { "name": "Saag Peshkesh", "description": "Creamed spinach, cottage cheese, fenugreek", "price": "$19" },
+        { "name": "Kadai Vegetable", "description": "Paneer, bell peppers, onion, kadai masala", "price": "$19" },
+        { "name": "Navratan Korma", "description": "Nine vegetables, nuts, creamy cashew sauce", "price": "$19" },
+        { "name": "Vegetable Korma", "description": "Mixed vegetables, mild cream sauce", "price": "$19" }
+      ]
+    },
+    {
+      "category": "Lentils & Beans",
+      "items": [
+        { "name": "Dal Makhani", "description": "Simmered black lentils in cream, tomato, butter", "price": "$18" }
+      ]
+    },
+    {
+      "category": "Lamb",
+      "items": [
+        { "name": "Lamb Chettinad", "description": "Spiced lamb curry, coconut, curry leaves", "price": "$29" },
+        { "name": "Lamb Saag", "description": "Lamb in spinach sauce", "price": "$29" },
+        { "name": "Rogan Josh", "description": "Lamb, onion, yogurt, Kashmiri chili", "price": "$29" },
+        { "name": "Lamb Jalfrezi", "description": "Lamb, peppers, onion, tomato masala", "price": "$29" },
+        { "name": "Lamb Boti Kebab", "description": "Tandoor grilled lamb pieces, spices", "price": "$30" }
+      ]
+    },
+    {
+      "category": "Pork",
+      "items": [
+        { "name": "Pork Vindaloo", "description": "Goan style pork, vinegar, chili, spices", "price": "$22" },
+        { "name": "Pork Jalfrezi", "description": "Pork, peppers, onion, tomato", "price": "$22" },
+        { "name": "Pork Pepper Fry", "description": "Peppery pork, curry leaves, onion", "price": "$22" }
+      ]
+    },
+    {
+      "category": "Chicken",
+      "items": [
+        { "name": "Kundapur Chicken", "description": "Coconut curry, mustard seeds, curry leaves", "price": "$23" },
+        { "name": "Chicken Saag", "description": "Chicken in spinach sauce", "price": "$23" },
+        { "name": "Chicken Kaju Mirch", "description": "Chicken, cashew, green chili", "price": "$23" },
+        { "name": "Chicken Korma", "description": "Chicken, nuts, cream, mild spices", "price": "$23" },
+        { "name": "Highway Chicken", "description": "Bone-in chicken, onion, ginger, garlic, spices", "price": "$23" },
+        { "name": "Amul Butter Chicken", "description": "Tandoor chicken, butter-tomato cream sauce", "price": "$23" },
+        { "name": "Tandoori Murgh", "description": "Tandoor roasted chicken on the bone", "price": "$23" },
+        { "name": "Chicken Tikka Masala", "description": "Tandoor chicken, onion-tomato masala", "price": "$23" }
+      ]
+    },
+    {
+      "category": "Seafood",
+      "items": [
+        { "name": "Pollich Meen", "description": "Fish, kokum, curry leaves, coconut", "price": "$28" },
+        { "name": "Shrimp Tikka Masala", "description": "Shrimp in tikka masala sauce", "price": "$28" },
+        { "name": "Shrimp Curry", "description": "Shrimp in traditional curry sauce", "price": "$28" },
+        { "name": "Salmon Curry", "description": "Salmon, coconut, curry leaves", "price": "$28" }
+      ]
+    },
+    {
+      "category": "Gilli Biryani",
+      "items": [
+        { "name": "Vegetable Biryani", "description": "Aromatic basmati rice, vegetables, spices", "price": "$22" },
+        { "name": "Chicken Biryani", "description": "Basmati rice, chicken, biryani spices", "price": "$24" },
+        { "name": "Lamb Biryani", "description": "Basmati rice, lamb, biryani masala", "price": "$26" },
+        { "name": "Shrimp Biryani", "description": "Basmati rice, shrimp, spices", "price": "$26" }
       ]
     },
     {
       "category": "Breads",
       "items": [
-        { "name": "Garlic Naan", "description": "Soft flatbread topped with garlic and butter.", "price": "$4.95" },
-        { "name": "Plain Naan", "description": "Traditional soft Indian flatbread.", "price": "$3.95" }
+        { "name": "Naan", "description": "Traditional tandoor baked bread", "price": "$4" },
+        { "name": "Bhavani Naan", "description": "House special naan", "price": "$6" },
+        { "name": "Whole Wheat Roti", "description": "Tandoor baked whole wheat bread", "price": "$4" },
+        { "name": "Lacha Paratha", "description": "Layered flaky bread", "price": "$6" }
+      ]
+    },
+    {
+      "category": "Sides",
+      "items": [
+        { "name": "Raita", "description": "Yogurt, cucumber, spices", "price": "$4" },
+        { "name": "Mango Chutney", "description": "Sweet mango relish", "price": "$4" },
+        { "name": "Sweet Tang Chutney", "description": "Tamarind & date chutney", "price": "$4" },
+        { "name": "Coconut Rice", "description": "Basmati rice cooked with coconut", "price": "$12" }
+      ]
+    },
+    {
+      "category": "Cocktails",
+      "items": [
+        { "name": "Red Sangria", "description": "Red wine, fresh fruits", "price": "$13" },
+        { "name": "White Sangria", "description": "White wine, fresh fruits", "price": "$13" },
+        { "name": "Passion Margarita", "description": "Agave, tequila, passion fruit, agave, orange, jalapeño, tajin rim", "price": "$13" },
+        { "name": "Ginger Martini", "description": "Ginger, citrus, vodka", "price": "$13" },
+        { "name": "Lychee Martini", "description": "White vodka, lychee, coconut", "price": "$13" },
+        { "name": "Silk Route", "description": "Pinot noir, rum, ojas, cloves", "price": "$13" }
+      ]
+    },
+    {
+      "category": "Beer",
+      "items": [
+        { "name": "1947 Lager (Tap)", "description": "Lager, 4.7% India", "price": "$10" },
+        { "name": "Founder Porter Ale (Tap)", "description": "American porter, 6.5%", "price": "$10" },
+        { "name": "Dogfish 60 IPA (Tap)", "description": "IPA, 6.0%", "price": "$10" },
+        { "name": "UFO Wheat (Tap)", "description": "Belgian wheat ale, 4.8%", "price": "$10" },
+        { "name": "Kingfisher (Bottle)", "description": "European pale lager, 4.8% India", "price": "$8" },
+        { "name": "Taj Mahal (Bottle)", "description": "Lager, 4.5% India", "price": "$10" },
+        { "name": "Estrella (Bottle)", "description": "Lager, 5.4% Spain", "price": "$8" },
+        { "name": "Heineken 0.0 (Bottle)", "description": "Non-alcoholic beer", "price": "$8" },
+        { "name": "Maduro Brown Ale (Bottle)", "description": "5.5% USA brown ale", "price": "$8" }
+      ]
+    },
+    {
+      "category": "Wine",
+      "items": [
+        { "name": "Bottega Vinaia Pinot Grigio", "description": "White wine, Italy", "price": "$13 / $44" },
+        { "name": "Yealands Sauvignon Blanc", "description": "White wine, New Zealand", "price": "$13 / $44" },
+        { "name": "3 Fingers Chardonnay", "description": "White wine, CA", "price": "$13 / $44" },
+        { "name": "La Luca Prosecco", "description": "Sparkling wine", "price": "$13 / $44" },
+        { "name": "Portillo Cabernet Sauvignon", "description": "Red wine, Argentina", "price": "$12 / $40" },
+        { "name": "Tinto Negro Malbec", "description": "Red wine, Mendoza", "price": "$12 / $40" },
+        { "name": "Alexander Brown Pinot Noir", "description": "Red wine, CA", "price": "$14 / $43" }
+      ]
+    },
+    {
+      "category": "Mocktails & Soft Drinks",
+      "items": [
+        { "name": "Lassi", "description": "Sweet or salted yogurt drink", "price": "$7" },
+        { "name": "Fresh Lime Soda", "description": "Fresh lime, soda", "price": "$7" },
+        { "name": "Cucumber Cooler", "description": "Cucumber, mint, lime", "price": "$7" },
+        { "name": "Soda", "description": "Coke / Diet Coke / Sprite / Ginger Ale", "price": "$3" },
+        { "name": "Saratoga Water", "description": "Still or sparkling", "price": "$7" },
+        { "name": "Coconut Lychee", "description": "Coconut, lychee, soda", "price": "$7" }
       ]
     }
   ],

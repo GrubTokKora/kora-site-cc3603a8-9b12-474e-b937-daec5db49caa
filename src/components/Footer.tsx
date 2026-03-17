@@ -60,18 +60,6 @@ export function Footer() {
             </a>
           </div>
         </div>
-
-        {/* Bottom Bar */}
-        <div className="mt-12 pt-8 border-t border-white/10 text-center">
-          <a 
-            href="https://onebrandingny.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-white/50 text-sm hover:text-white transition-colors"
-          >
-            POWERED BY ONEBRANDING
-          </a>
-        </div>
       </div>
     </footer>
   );

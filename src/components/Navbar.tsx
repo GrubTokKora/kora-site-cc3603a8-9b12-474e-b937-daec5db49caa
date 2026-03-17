@@ -1,12 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronDown, MapPin, Phone, Mail } from 'lucide-react';
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
+import { Menu, X, MapPin, Phone, Mail } from 'lucide-react';
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -105,29 +99,12 @@ export function Navbar() {
                 </Link>
               ))}
 
-              {/* Menu Dropdown */}
-              <DropdownMenu>
-                <DropdownMenuTrigger className="nav-link flex items-center gap-1 outline-none">
-                  Menu <ChevronDown className="w-3 h-3" />
-                </DropdownMenuTrigger>
-                <DropdownMenuContent className="bg-black/95 border-white/20">
-                  <DropdownMenuItem className="text-white/90 hover:text-white hover:bg-white/10 cursor-pointer" asChild>
-                    <Link to="/menu" className="w-full">
-                      Dining Menu
-                    </Link>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem className="text-white/90 hover:text-white hover:bg-white/10 cursor-pointer">
-                    <a 
-                      href="/nh44-indian-catering-menu.pdf" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="w-full"
-                    >
-                      Catering
-                    </a>
-                  </DropdownMenuItem>
-                </DropdownMenuContent>
-              </DropdownMenu>
+              <Link
+                to="/menu"
+                className={`nav-link ${isActive('/menu') ? 'text-white' : ''}`}
+              >
+                Menu
+              </Link>
 
               {externalLinks.map((link) => (
                 <a
