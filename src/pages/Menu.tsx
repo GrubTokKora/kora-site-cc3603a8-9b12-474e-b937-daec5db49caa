@@ -1,4 +1,3 @@
-===
 import { HeroSection } from '@/components/HeroSection';
 import { DecorativeDivider } from '@/components/DecorativeDivider';
 import { backbone } from '@/data';
