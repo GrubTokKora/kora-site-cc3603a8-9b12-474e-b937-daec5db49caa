@@ -111,15 +111,10 @@ export function Navbar() {
                   Menu <ChevronDown className="w-3 h-3" />
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="bg-black/95 border-white/20">
-                  <DropdownMenuItem className="text-white/90 hover:text-white hover:bg-white/10 cursor-pointer">
-                    <a 
-                      href="/nh44-indian-dining-menu.pdf" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="w-full"
-                    >
+                  <DropdownMenuItem className="text-white/90 hover:text-white hover:bg-white/10 cursor-pointer" asChild>
+                    <Link to="/menu" className="w-full">
                       Dining Menu
-                    </a>
+                    </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem className="text-white/90 hover:text-white hover:bg-white/10 cursor-pointer">
                     <a 
@@ -176,14 +171,13 @@ export function Navbar() {
             ))}
             <div className="border-t border-white/10 pt-4">
               <p className="text-white/50 text-sm mb-2">Menu</p>
-              <a 
-                href="/nh44-indian-dining-menu.pdf" 
-                target="_blank" 
-                rel="noopener noreferrer"
+              <Link
+                to="/menu"
+                onClick={() => setIsMobileMenuOpen(false)}
                 className="block text-white/90 py-2"
               >
                 Dining Menu
-              </a>
+              </Link>
               <a 
                 href="/nh44-indian-catering-menu.pdf" 
                 target="_blank" 
