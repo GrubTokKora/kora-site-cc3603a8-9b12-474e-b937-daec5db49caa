@@ -36,7 +36,8 @@
 
 @layer base {
   * {
-    @apply border-border;
+    /* Equivalent to Tailwind's border-border utility */
+    border-color: hsl(var(--border));
   }
   
   html {
@@ -44,7 +45,10 @@
   }
   
   body {
-    @apply bg-background text-foreground antialiased;
+    /* Equivalent to bg-background text-foreground antialiased */
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    -webkit-font-smoothing: antialiased;
     font-family: 'Inter', sans-serif;
   }
   
@@ -76,47 +80,125 @@
   }
   
   .decorative-divider {
-    @apply flex items-center justify-center gap-3 my-8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem; /* gap-3 */
+    margin-top: 2rem;  /* my-8 */
+    margin-bottom: 2rem;
   }
   
   .decorative-divider::before,
   .decorative-divider::after {
     content: '';
-    @apply w-16 h-px bg-white/30;
+    width: 4rem; /* w-16 */
+    height: 1px; /* h-px */
+    background-color: rgba(255, 255, 255, 0.3); /* bg-white/30 */
   }
   
   .decorative-diamond {
-    @apply w-2 h-2 rotate-45 bg-white/50;
+    width: 0.5rem;  /* w-2 */
+    height: 0.5rem; /* h-2 */
+    transform: rotate(45deg);
+    background-color: rgba(255, 255, 255, 0.5); /* bg-white/50 */
   }
   
   .nav-link {
-    @apply relative text-white/90 hover:text-white transition-colors duration-300 text-sm tracking-widest uppercase;
+    position: relative;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.875rem; /* text-sm */
+    letter-spacing: 0.1em; /* tracking-widest */
+    text-transform: uppercase;
+    transition-property: color;
+    transition-duration: 300ms;
+  }
+  
+  .nav-link:hover {
+    color: #fff;
   }
   
   .nav-link::after {
     content: '';
-    @apply absolute -bottom-1 left-0 w-0 h-px bg-white transition-all duration-300;
+    position: absolute;
+    left: 0;
+    bottom: -0.25rem; /* -bottom-1 */
+    width: 0;
+    height: 1px; /* h-px */
+    background-color: #fff;
+    transition-property: width, background-color, transform, opacity;
+    transition-duration: 300ms;
   }
   
   .nav-link:hover::after {
-    @apply w-full;
+    width: 100%;
   }
   
   .btn-primary {
-    @apply bg-gold text-black font-medium px-6 py-3 rounded-sm hover:bg-yellow-400 transition-colors duration-300 tracking-wider uppercase text-sm;
+    background-color: hsl(var(--gold)); /* bg-gold */
+    color: #000;
+    font-weight: 500; /* font-medium */
+    padding-left: 1.5rem;  /* px-6 */
+    padding-right: 1.5rem;
+    padding-top: 0.75rem;  /* py-3 */
+    padding-bottom: 0.75rem;
+    border-radius: 0.125rem; /* rounded-sm */
+    font-size: 0.875rem; /* text-sm */
+    letter-spacing: 0.05em; /* tracking-wider */
+    text-transform: uppercase;
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-duration: 300ms;
+  }
+  
+  .btn-primary:hover {
+    background-color: rgb(250, 204, 21); /* hover:bg-yellow-400 */
   }
   
   .btn-outline {
-    @apply border border-white/50 text-white px-6 py-3 rounded-sm hover:bg-white/10 transition-colors duration-300 tracking-wider uppercase text-sm;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.5);
+    color: #fff;
+    padding-left: 1.5rem;  /* px-6 */
+    padding-right: 1.5rem;
+    padding-top: 0.75rem;  /* py-3 */
+    padding-bottom: 0.75rem;
+    border-radius: 0.125rem; /* rounded-sm */
+    font-size: 0.875rem; /* text-sm */
+    letter-spacing: 0.05em; /* tracking-wider */
+    text-transform: uppercase;
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-duration: 300ms;
+  }
+  
+  .btn-outline:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* hover:bg-white/10 */
   }
   
   .section-title {
-    @apply text-4xl md:text-5xl lg:text-6xl font-light text-white text-center;
+    font-size: 2.25rem; /* text-4xl */
+    line-height: 2.5rem;
+    font-weight: 300; /* font-light */
+    color: #fff;
+    text-align: center;
     font-family: 'Cormorant Garamond', serif;
   }
   
+  @media (min-width: 768px) {
+    .section-title {
+      font-size: 3rem; /* md:text-5xl */
+      line-height: 1;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .section-title {
+      font-size: 3.75rem; /* lg:text-6xl */
+      line-height: 1;
+    }
+  }
+  
   .glass-effect {
-    @apply backdrop-blur-md bg-black/30;
+    backdrop-filter: blur(12px); /* approx. blur-md */
+    background-color: rgba(0, 0, 0, 0.3);
   }
 }
 
