@@ -1,4 +1,3 @@
-===
 // This file contains the canonical data for the website,
 // which would in a real-world scenario be fetched from a CMS or API.
 
